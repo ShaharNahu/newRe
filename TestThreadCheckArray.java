@@ -9,25 +9,25 @@ public class TestThreadCheckArray {
             System.out.println("Enter array size");
             int num = input.nextInt();
             
-            // щйрей лап: йцйшъ ArrayList бочен отшк сиий
+            // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅ ArrayList пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
             ArrayList<Integer> array = new ArrayList<>();
             
             System.out.println("Enter numbers for array");
             for (int index = 0; index < num; index++) {
-                array.add(input.nextInt()); // десфд м-ArrayList
+                array.add(input.nextInt()); // пїЅпїЅпїЅпїЅпїЅ пїЅ-ArrayList
             }
             
             System.out.println("Enter number");
             num = input.nextInt();
             
-            // йцйшъ оефт щм SharedData тн ArrayList
+            // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ SharedData пїЅпїЅ ArrayList
             SharedData sd = new SharedData(array, num);
             
-            // йцйшъ щрй зеийн
+            // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
             thread1 = new Thread(new ThreadCheckArray(sd), "thread1");
             thread2 = new Thread(new ThreadCheckArray(sd), "thread2");
             
-            // дфтмъ дзеийн
+            // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
             thread1.start();
             thread2.start();
             
@@ -43,7 +43,7 @@ public class TestThreadCheckArray {
                 return;
             }
             
-            // дгфсъ дъецад
+            // shahar shahar shahar
             System.out.println("Solution for b: " + sd.getB() + ", n = " + sd.getArray().size());
             System.out.print("I:    ");
             for (int index = 0; index < sd.getArray().size(); index++) {
